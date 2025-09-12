@@ -1,5 +1,3 @@
-<img width="1511" height="385" alt="Clipboard_Screenshot_1757665794" src="https://github.com/user-attachments/assets/c94baba4-4a38-4c3c-9a4a-158655fd50e9" /># Portfolio Blog - Gatsby + WordPress
-
 A modern portfolio blog built with Gatsby, featuring static site generation (SSG) with optional WordPress data integration. This project demonstrates how to build a fast, SEO-friendly blog that can work with or without WordPress.
 
 ## 🎯 Project Purpose
