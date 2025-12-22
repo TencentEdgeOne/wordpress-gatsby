@@ -98,6 +98,15 @@ GATSBY_GISCUS_REPO_ID=your-repo-id
 GATSBY_GISCUS_CATEGORY_ID=your-category-id
 ```
 
+### WordPress Response Examples (build-time snapshots)
+
+- 运行 `npm run build` 且配置了 `GATSBY_WORDPRESS_URL` 后，会在 `wordpress-examples/` 下生成 WordPress 原始响应示例。
+- 主要文件：
+  - `raw-all.json`：包含所有请求的原始数据和接口地址。
+  - `posts.json` / `categories.json` / `pages.json`：按接口拆分的原始返回。
+  - `wp-data.json`：汇总视图（时间、站点、模式、posts/categories/pages 概览）。
+- 生成目的：便于使用模版的人参考真实 WordPress 返回结构来配置自己的站点。
+
 ### WordPress Configuration (Optional)
 
 **If `GATSBY_WORDPRESS_URL` is NOT set:**

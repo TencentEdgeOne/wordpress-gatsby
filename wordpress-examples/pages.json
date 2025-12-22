@@ -1,0 +1,435 @@
+{
+  "fetchedAt": "2025-12-22T06:47:31.990Z",
+  "site": "tomchild5.wordpress.com",
+  "apiMode": "default",
+  "apiBase": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com",
+  "endpoint": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages?_embed&per_page=50",
+  "data": [
+    {
+      "id": 15,
+      "date": "2025-06-26T17:15:36",
+      "date_gmt": "2025-06-26T09:15:36",
+      "guid": {
+        "rendered": "https://tomchild5.wordpress.com/?page_id=15"
+      },
+      "modified": "2025-06-26T17:15:36",
+      "modified_gmt": "2025-06-26T09:15:36",
+      "slug": "skills",
+      "status": "publish",
+      "type": "page",
+      "link": "https://tomchild5.wordpress.com/skills/",
+      "title": {
+        "rendered": "Skills"
+      },
+      "content": {
+        "rendered": "\n<p>[</p>\n\n\n\n<p>{ id: 1, percentage: 95, color: &#8216;#61dafb&#8217;, icon: &#8216;R&#8217;, name: &#8216;React&#8217; },</p>\n\n\n\n<p>{ id: 2, percentage: 90, color: &#8216;#f7df1e&#8217;, icon: &#8216;JS&#8217;, name: &#8216;JavaScript&#8217; },</p>\n\n\n\n<p>{ id: 3, percentage: 88, color: &#8216;#3178c6&#8217;, icon: &#8216;TS&#8217;, name: &#8216;TypeScript&#8217; },</p>\n\n\n\n<p>{ id: 4, percentage: 85, color: &#8216;#e34c26&#8217;, icon: &#8216;H&#8217;, name: &#8216;HTML5&#8217; },</p>\n\n\n\n<p>{ id: 5, percentage: 92, color: &#8216;#1572b6&#8217;, icon: &#8216;C&#8217;, name: &#8216;CSS3&#8217; },</p>\n\n\n\n<p>{ id: 6, percentage: 87, color: &#8216;#563d7c&#8217;, icon: &#8216;B&#8217;, name: &#8216;Bootstrap&#8217; },</p>\n\n\n\n<p>{ id: 7, percentage: 89, color: &#8216;#000000&#8217;, icon: &#8216;N&#8217;, name: &#8216;Node.js&#8217; },</p>\n\n\n\n<p>{ id: 8, percentage: 83, color: &#8216;#339933&#8217;, icon: &#8216;G&#8217;, name: &#8216;Git&#8217; },</p>\n\n\n\n<p>{ id: 9, percentage: 91, color: &#8216;#ff6b35&#8217;, icon: &#8216;P&#8217;, name: &#8216;Python&#8217; },</p>\n\n\n\n<p>{ id: 10, percentage: 86, color: &#8216;#7952b3&#8217;, icon: &#8216;V&#8217;, name: &#8216;Vue.js&#8217; },</p>\n\n\n\n<p>{ id: 11, percentage: 94, color: &#8216;#00d8ff&#8217;, icon: &#8216;G&#8217;, name: &#8216;Gatsby&#8217; },</p>\n\n\n\n<p>{ id: 12, percentage: 82, color: &#8216;#f05032&#8217;, icon: &#8216;G&#8217;, name: &#8216;GitHub&#8217; }</p>\n\n\n\n<p>]</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>[ { id: 1, percentage: 95, color: &#8216;#61dafb&#8217;, icon: &#8216;R&#8217;, name: &#8216;React&#8217; }, { id: 2, percentage: 90, color: &#8216;#f7df1e&#8217;, icon: &#8216;JS&#8217;, name: &#8216;JavaScript&#8217; }, { id: 3, percentage: 88, color: &#8216;#3178c6&#8217;, icon: &#8216;TS&#8217;, name: &#8216;TypeScript&#8217; }, { id: 4, percentage: 85, color: &#8216;#e34c26&#8217;, icon: &#8216;H&#8217;, name: &#8216;HTML5&#8217; }, { id: 5, percentage: 92, color: [&hellip;]</p>\n",
+        "protected": false
+      },
+      "author": 266229739,
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "template": "",
+      "meta": {
+        "advanced_seo_description": "",
+        "jetpack_seo_html_title": "",
+        "jetpack_seo_noindex": false,
+        "_coblocks_attr": "",
+        "_coblocks_dimensions": "",
+        "_coblocks_responsive_height": "",
+        "_coblocks_accordion_ie_support": "",
+        "jetpack_post_was_ever_published": false,
+        "reader_suggested_tags": "",
+        "footnotes": ""
+      },
+      "class_list": [
+        "post-15",
+        "page",
+        "type-page",
+        "status-publish",
+        "hentry"
+      ],
+      "jetpack_shortlink": "https://wp.me/Pgy5PF-f",
+      "jetpack_sharing_enabled": true,
+      "jetpack_likes_enabled": true,
+      "jetpack-related-posts": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/15",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/types/page"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+          }
+        ],
+        "replies": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/comments?post=15"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 1,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/15/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 16,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/15/revisions/16"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/media?parent=15"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      },
+      "_embedded": {
+        "author": [
+          {
+            "id": 266229739,
+            "name": "wp364786053",
+            "url": "http://tomchild5.wordpress.com",
+            "description": "",
+            "link": "https://tomchild5.wordpress.com/author/wp364786053/",
+            "slug": "wp364786053",
+            "avatar_urls": {
+              "24": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=24&d=identicon&r=g",
+              "48": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=48&d=identicon&r=g",
+              "96": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=96&d=identicon&r=g"
+            },
+            "_links": {
+              "self": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "date": "2025-06-26T16:22:59",
+      "date_gmt": "2025-06-26T08:22:59",
+      "guid": {
+        "rendered": "https://tomchild5.wordpress.com/?page_id=12"
+      },
+      "modified": "2025-06-26T16:35:53",
+      "modified_gmt": "2025-06-26T08:35:53",
+      "slug": "projects",
+      "status": "publish",
+      "type": "page",
+      "link": "https://tomchild5.wordpress.com/projects/",
+      "title": {
+        "rendered": "Projects"
+      },
+      "content": {
+        "rendered": "\n<p>[</p>\n\n\n\n<p>{</p>\n\n\n\n<p>id: 1,</p>\n\n\n\n<p>title: &#8216;E-Commerce Platform&#8217;,</p>\n\n\n\n<p>description: &#8216;A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.&#8217;,</p>\n\n\n\n<p>technologies: [&#8216;React&#8217;, &#8216;Node.js&#8217;, &#8216;MongoDB&#8217;, &#8216;Stripe&#8217;],</p>\n\n\n\n<p>svg: (</p>\n\n\n\n<p>&lt;svg <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>viewBox</em>=&#8221;0 0 280 280&#8243; <em>fill</em>=&#8221;none&#8221; <em>xmlns</em>=&#8221;<a href=\"http://www.w3.org/2000/svg&#8221;&#038;gt\" rel=\"nofollow\">http://www.w3.org/2000/svg&#8221;&#038;gt</a>;</p>\n\n\n\n<p>&lt;rect <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>rx</em>=&#8221;20&#8243; <em>fill</em>=&#8221;#4299e1&#8243;/&gt;</p>\n\n\n\n<p>&lt;path <em>d</em>=&#8221;M50 80h100v40H50z&#8221; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;70&#8243; <em>cy</em>=&#8221;100&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#4299e1&#8243;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;90&#8243; <em>cy</em>=&#8221;100&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#4299e1&#8243;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;110&#8243; <em>cy</em>=&#8221;100&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#4299e1&#8243;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;50&#8243; <em>y</em>=&#8221;130&#8243; <em>width</em>=&#8221;60&#8243; <em>height</em>=&#8221;20&#8243; <em>rx</em>=&#8221;10&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;120&#8243; <em>y</em>=&#8221;130&#8243; <em>width</em>=&#8221;30&#8243; <em>height</em>=&#8221;20&#8243; <em>rx</em>=&#8221;10&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;/svg&gt;</p>\n\n\n\n<p>),</p>\n\n\n\n<p>link: &#8216;#&#8217;,</p>\n\n\n\n<p>github: &#8216;#&#8217;</p>\n\n\n\n<p>},</p>\n\n\n\n<p>{</p>\n\n\n\n<p>id: 2,</p>\n\n\n\n<p>title: &#8216;Task Management App&#8217;,</p>\n\n\n\n<p>description: &#8216;A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.&#8217;,</p>\n\n\n\n<p>technologies: [&#8216;Vue.js&#8217;, &#8216;Firebase&#8217;, &#8216;Vuex&#8217;, &#8216;Vuetify&#8217;],</p>\n\n\n\n<p>svg: (</p>\n\n\n\n<p>&lt;svg <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>viewBox</em>=&#8221;0 0 280 280&#8243; <em>fill</em>=&#8221;none&#8221; <em>xmlns</em>=&#8221;<a href=\"http://www.w3.org/2000/svg&#8221;&#038;gt\" rel=\"nofollow\">http://www.w3.org/2000/svg&#8221;&#038;gt</a>;</p>\n\n\n\n<p>&lt;rect <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>rx</em>=&#8221;20&#8243; <em>fill</em>=&#8221;#38b2ac&#8221;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;40&#8243; <em>y</em>=&#8221;60&#8243; <em>width</em>=&#8221;120&#8243; <em>height</em>=&#8221;20&#8243; <em>rx</em>=&#8221;10&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;40&#8243; <em>y</em>=&#8221;90&#8243; <em>width</em>=&#8221;100&#8243; <em>height</em>=&#8221;20&#8243; <em>rx</em>=&#8221;10&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;40&#8243; <em>y</em>=&#8221;120&#8243; <em>width</em>=&#8221;80&#8243; <em>height</em>=&#8221;20&#8243; <em>rx</em>=&#8221;10&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;170&#8243; <em>cy</em>=&#8221;70&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#38b2ac&#8221;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;150&#8243; <em>cy</em>=&#8221;100&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#38b2ac&#8221;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;130&#8243; <em>cy</em>=&#8221;130&#8243; <em>r</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#38b2ac&#8221;/&gt;</p>\n\n\n\n<p>&lt;/svg&gt;</p>\n\n\n\n<p>),</p>\n\n\n\n<p>link: &#8216;#&#8217;,</p>\n\n\n\n<p>github: &#8216;#&#8217;</p>\n\n\n\n<p>},</p>\n\n\n\n<p>{</p>\n\n\n\n<p>id: 3,</p>\n\n\n\n<p>title: &#8216;Portfolio Website&#8217;,</p>\n\n\n\n<p>description: &#8216;A modern, responsive portfolio website built with Gatsby and styled-components. Features smooth animations and SEO optimization.&#8217;,</p>\n\n\n\n<p>technologies: [&#8216;Gatsby&#8217;, &#8216;Styled-components&#8217;, &#8216;GraphQL&#8217;, &#8216;Netlify&#8217;],</p>\n\n\n\n<p>svg: (</p>\n\n\n\n<p>&lt;svg <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>viewBox</em>=&#8221;0 0 280 280&#8243; <em>fill</em>=&#8221;none&#8221; <em>xmlns</em>=&#8221;<a href=\"http://www.w3.org/2000/svg&#8221;&#038;gt\" rel=\"nofollow\">http://www.w3.org/2000/svg&#8221;&#038;gt</a>;</p>\n\n\n\n<p>&lt;rect <em>width</em>=&#8221;280&#8243; <em>height</em>=&#8221;280&#8243; <em>rx</em>=&#8221;20&#8243; <em>fill</em>=&#8221;#ed8936&#8243;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;50&#8243; <em>y</em>=&#8221;50&#8243; <em>width</em>=&#8221;100&#8243; <em>height</em>=&#8221;60&#8243; <em>rx</em>=&#8221;8&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;60&#8243; <em>y</em>=&#8221;60&#8243; <em>width</em>=&#8221;80&#8243; <em>height</em>=&#8221;8&#8243; <em>rx</em>=&#8221;4&#8243; <em>fill</em>=&#8221;#ed8936&#8243;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;60&#8243; <em>y</em>=&#8221;75&#8243; <em>width</em>=&#8221;60&#8243; <em>height</em>=&#8221;8&#8243; <em>rx</em>=&#8221;4&#8243; <em>fill</em>=&#8221;#ed8936&#8243;/&gt;</p>\n\n\n\n<p>&lt;rect <em>x</em>=&#8221;60&#8243; <em>y</em>=&#8221;90&#8243; <em>width</em>=&#8221;40&#8243; <em>height</em>=&#8221;8&#8243; <em>rx</em>=&#8221;4&#8243; <em>fill</em>=&#8221;#ed8936&#8243;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;80&#8243; <em>cy</em>=&#8221;130&#8243; <em>r</em>=&#8221;15&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;circle <em>cx</em>=&#8221;120&#8243; <em>cy</em>=&#8221;130&#8243; <em>r</em>=&#8221;15&#8243; <em>fill</em>=&#8221;#fff&#8221;/&gt;</p>\n\n\n\n<p>&lt;/svg&gt;</p>\n\n\n\n<p>),</p>\n\n\n\n<p>link: &#8216;#&#8217;,</p>\n\n\n\n<p>github: &#8216;#&#8217;</p>\n\n\n\n<p>}</p>\n\n\n\n<p>]</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>[ { id: 1, title: &#8216;E-Commerce Platform&#8217;, description: &#8216;A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.&#8217;, technologies: [&#8216;React&#8217;, &#8216;Node.js&#8217;, &#8216;MongoDB&#8217;, &#8216;Stripe&#8217;], svg: ( &lt;svg width=&#8221;280&#8243; height=&#8221;280&#8243; viewBox=&#8221;0 0 280 280&#8243; fill=&#8221;none&#8221; xmlns=&#8221;<a href=\"http://www.w3.org/2000/svg&#8221;&#038;gt\" rel=\"nofollow\">http://www.w3.org/2000/svg&#8221;&#038;gt</a>; &lt;rect width=&#8221;280&#8243; height=&#8221;280&#8243; rx=&#8221;20&#8243; fill=&#8221;#4299e1&#8243;/&gt; &lt;path d=&#8221;M50 80h100v40H50z&#8221; fill=&#8221;#fff&#8221;/&gt; &lt;circle [&hellip;]</p>\n",
+        "protected": false
+      },
+      "author": 266229739,
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "comment_status": "closed",
+      "ping_status": "closed",
+      "template": "",
+      "meta": {
+        "advanced_seo_description": "",
+        "jetpack_seo_html_title": "",
+        "jetpack_seo_noindex": false,
+        "_coblocks_attr": "",
+        "_coblocks_dimensions": "",
+        "_coblocks_responsive_height": "",
+        "_coblocks_accordion_ie_support": "",
+        "jetpack_post_was_ever_published": false,
+        "reader_suggested_tags": "",
+        "footnotes": ""
+      },
+      "class_list": [
+        "post-12",
+        "page",
+        "type-page",
+        "status-publish",
+        "hentry"
+      ],
+      "jetpack_shortlink": "https://wp.me/Pgy5PF-c",
+      "jetpack_sharing_enabled": true,
+      "jetpack_likes_enabled": true,
+      "jetpack-related-posts": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/12",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/types/page"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+          }
+        ],
+        "replies": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/comments?post=12"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 2,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/12/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 14,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/12/revisions/14"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/media?parent=12"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      },
+      "_embedded": {
+        "author": [
+          {
+            "id": 266229739,
+            "name": "wp364786053",
+            "url": "http://tomchild5.wordpress.com",
+            "description": "",
+            "link": "https://tomchild5.wordpress.com/author/wp364786053/",
+            "slug": "wp364786053",
+            "avatar_urls": {
+              "24": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=24&d=identicon&r=g",
+              "48": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=48&d=identicon&r=g",
+              "96": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=96&d=identicon&r=g"
+            },
+            "_links": {
+              "self": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "date": "2025-05-15T08:14:11",
+      "date_gmt": "2025-05-15T08:14:11",
+      "guid": {
+        "rendered": "http://tomchild5.wordpress.com/?page_id=1"
+      },
+      "modified": "2025-06-26T17:20:03",
+      "modified_gmt": "2025-06-26T09:20:03",
+      "slug": "about",
+      "status": "publish",
+      "type": "page",
+      "link": "https://tomchild5.wordpress.com/about/",
+      "title": {
+        "rendered": "About"
+      },
+      "content": {
+        "rendered": "\n<p>{</p>\n\n\n\n<p>title: &#8220;About Me&#8221;,</p>\n\n\n\n<p>content: &#8220;Hi, I&#8217;m Tom Tang, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you&#8217;ll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.&#8221;,</p>\n\n\n\n<p>personal_info: {</p>\n\n\n\n<p>name: &#8220;Tom Tang&#8221;,</p>\n\n\n\n<p>bio: &#8220;Hi, I&#8217;m Tom Tang, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you&#8217;ll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.&#8221;,</p>\n\n\n\n<p>avatar: &#8220;<a href=\"https://avatars.githubusercontent.com/u/20943608?v=4&#038;#8221\" rel=\"nofollow\">https://avatars.githubusercontent.com/u/20943608?v=4&#038;#8221</a>;</p>\n\n\n\n<p>}</p>\n\n\n\n<p>}</p>\n",
+        "protected": false
+      },
+      "excerpt": {
+        "rendered": "<p>{ title: &#8220;About Me&#8221;, content: &#8220;Hi, I&#8217;m Tom Tang, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you&#8217;ll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.&#8221;, personal_info: { name: &#8220;Tom [&hellip;]</p>\n",
+        "protected": false
+      },
+      "author": 266229739,
+      "featured_media": 0,
+      "parent": 0,
+      "menu_order": 0,
+      "comment_status": "closed",
+      "ping_status": "open",
+      "template": "",
+      "meta": {
+        "advanced_seo_description": "",
+        "jetpack_seo_html_title": "",
+        "jetpack_seo_noindex": false,
+        "_coblocks_attr": "",
+        "_coblocks_dimensions": "",
+        "_coblocks_responsive_height": "",
+        "_coblocks_accordion_ie_support": "",
+        "jetpack_post_was_ever_published": false,
+        "reader_suggested_tags": "",
+        "footnotes": ""
+      },
+      "class_list": [
+        "post-1",
+        "page",
+        "type-page",
+        "status-publish",
+        "hentry"
+      ],
+      "jetpack_shortlink": "https://wp.me/Pgy5PF-1",
+      "jetpack_sharing_enabled": true,
+      "jetpack_likes_enabled": true,
+      "jetpack-related-posts": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/1",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/types/page"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+          }
+        ],
+        "replies": [
+          {
+            "embeddable": true,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/comments?post=1"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 1,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/1/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 17,
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/pages/1/revisions/17"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/media?parent=1"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      },
+      "_embedded": {
+        "author": [
+          {
+            "id": 266229739,
+            "name": "wp364786053",
+            "url": "http://tomchild5.wordpress.com",
+            "description": "",
+            "link": "https://tomchild5.wordpress.com/author/wp364786053/",
+            "slug": "wp364786053",
+            "avatar_urls": {
+              "24": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=24&d=identicon&r=g",
+              "48": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=48&d=identicon&r=g",
+              "96": "https://secure.gravatar.com/avatar/e4aeac3bb8e03a9c4231263be1b55d0ef4e965533e5c4e2a605ede333fac5680?s=96&d=identicon&r=g"
+            },
+            "_links": {
+              "self": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users/266229739"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/users"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

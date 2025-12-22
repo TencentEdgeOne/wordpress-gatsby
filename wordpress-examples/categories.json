@@ -1,0 +1,459 @@
+{
+  "fetchedAt": "2025-12-22T06:47:31.990Z",
+  "site": "tomchild5.wordpress.com",
+  "apiMode": "default",
+  "apiBase": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com",
+  "endpoint": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories",
+  "data": [
+    {
+      "id": 256,
+      "count": 0,
+      "description": "{\r\n    title: \"About Me\",\r\n    content: \"Hi, I'm Someone, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community. On this blog, you'll find my thoughts on web development, tutorials, and project showcases. I hope my content can inspire others in their coding journey.\"\r\n}",
+      "link": "https://tomchild5.wordpress.com/category/about/",
+      "name": "About",
+      "slug": "about",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/256",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=256"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 992,
+      "count": 0,
+      "description": "{\r\n    title: \"Comments &amp; Discussion\",\r\n    description: \"Share your thoughts, questions, or suggestions here. Let's connect and discuss!\",\r\n    subtitle: \"Join the Discussion\",\r\n    subtitle_description: \"Have something to say or ask? Leave your comment below!\",\r\n    rules: [\r\n      \"Be respectful and constructive in your comments\",\r\n      \"No spam, self-promotion, or advertising allowed\",\r\n       \"No personal attacks, hate speech, or harassment\",\r\n        \"Stay on topic and keep discussions relevant\",\r\n        \"No inappropriate, offensive, or illegal content\",\r\n        \"Use clear, friendly, and inclusive language\"\r\n    ]\r\n  }",
+      "link": "https://tomchild5.wordpress.com/category/comments/",
+      "name": "Comments",
+      "slug": "comments",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/992",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=992"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 8782,
+      "count": 0,
+      "description": "{\r\n  title: \"Get In Touch\",\r\n  description: \"I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.\",\r\n  bottom_info: {\r\n    response_time: \"I typically respond to messages within 24 hours during business days.\",\r\n    closing_message: \"Looking forward to hearing from you! 🚀\"\r\n  }\r\n}",
+      "link": "https://tomchild5.wordpress.com/category/contact/",
+      "name": "Contact",
+      "slug": "contact",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/8782",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=8782"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 692528,
+      "count": 0,
+      "description": "{\r\n    \"text\": \"© 2025 Someone. All rights reserved.\",\r\n    \"links\": [\r\n      { \"title\": \"Privacy Policy\", \"url\": \"/privacy\" },\r\n      { \"title\": \"Terms of Service\", \"url\": \"/terms\" },\r\n      { \"title\": \"Sitemap\", \"url\": \"/sitemap\" }\r\n    ],\r\n    \"extra\": \"Built with Gatsby + Wordpress\",\r\n    \"github\": {\r\n      \"url\": \"https://github.com/tomcomtang/portfolio-blog\",\r\n      \"text\": \"Star this project on Github\"\r\n    }\r\n  }",
+      "link": "https://tomchild5.wordpress.com/category/footer/",
+      "name": "Footer",
+      "slug": "footer",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/692528",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=692528"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 38627,
+      "count": 0,
+      "description": "{\"basic\":{\"name\":\"Someone Name\",\"title\":\"I am\",\"description\":\"I am a web developer and blogger, passionate about sharing knowledge and building cool things with code.nWelcome to my portfolio blog!\",\"avatar\":\"https://avatars.githubusercontent.com/u/20943608?v=4\"},\"buttons\":[{\"text\":\"View Posts\",\"link\":\"/posts\",\"type\":\"primary\"},{\"text\":\"Contact Me\",\"link\":\"/contact\",\"type\":\"secondary\"}]}",
+      "link": "https://tomchild5.wordpress.com/category/hero/",
+      "name": "Hero",
+      "slug": "hero",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/38627",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=38627"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 4526,
+      "count": 0,
+      "description": "{\r\ntitle: \"Blog Posts\",\r\nsubtitle: \"Explore our latest articles on web development, design, and technology\"\r\n}",
+      "link": "https://tomchild5.wordpress.com/category/posts/",
+      "name": "Posts",
+      "slug": "posts",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/4526",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=4526"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 2008,
+      "count": 0,
+      "description": "[\r\n  {\r\n    id: 1,\r\n    title: 'E-Commerce Platform',\r\n    description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',\r\n    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],\r\n    svg: '/svg/project1.svg',\r\n    link: '#',\r\n    github: '#'\r\n  },\r\n  {\r\n    id: 2,\r\n    title: 'Task Management App',\r\n    description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',\r\n    technologies: ['Vue.js', 'Firebase', 'Vuex', 'Vuetify'],\r\n    svg: '/svg/project2.svg',\r\n    link: '#',\r\n    github: '#'\r\n  },\r\n  {\r\n    id: 3,\r\n    title: 'Portfolio Website',\r\n    description: 'A modern, responsive portfolio website built with Gatsby and styled-components. Features smooth animations and SEO optimization.',\r\n    technologies: ['Gatsby', 'Styled-components', 'GraphQL', 'Netlify'],\r\n    svg: '/svg/project3.svg',\r\n    link: '#',\r\n    github: '#'\r\n  }\r\n]",
+      "link": "https://tomchild5.wordpress.com/category/projects/",
+      "name": "Projects",
+      "slug": "projects",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/2008",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=2008"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 83162,
+      "count": 0,
+      "description": "[\r\n  { id: 1, percentage: 95, color: '#61dafb', icon: 'R', name: 'React' },\r\n  { id: 2, percentage: 90, color: '#f7df1e', icon: 'JS', name: 'JavaScript' },\r\n  { id: 3, percentage: 88, color: '#3178c6', icon: 'TS', name: 'TypeScript' },\r\n  { id: 4, percentage: 85, color: '#e34c26', icon: 'H', name: 'HTML5' },\r\n  { id: 5, percentage: 92, color: '#1572b6', icon: 'C', name: 'CSS3' },\r\n  { id: 6, percentage: 87, color: '#563d7c', icon: 'B', name: 'Bootstrap' },\r\n  { id: 7, percentage: 89, color: '#000000', icon: 'N', name: 'Node.js' },\r\n  { id: 8, percentage: 83, color: '#339933', icon: 'G', name: 'Git' },\r\n  { id: 9, percentage: 91, color: '#ff6b35', icon: 'P', name: 'Python' },\r\n  { id: 10, percentage: 86, color: '#7952b3', icon: 'V', name: 'Vue.js' },\r\n  { id: 11, percentage: 94, color: '#00d8ff', icon: 'G', name: 'Gatsby' },\r\n  { id: 12, percentage: 82, color: '#f05032', icon: 'G', name: 'GitHub' }\r\n]",
+      "link": "https://tomchild5.wordpress.com/category/skills/",
+      "name": "Skills",
+      "slug": "skills",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/83162",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=83162"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 14403,
+      "count": 0,
+      "description": "{\"socials\":[{\"name\":\"twitter\",\"val\":\"https://x.com/TencentCloudEO\",\"svg\":\"twitter.svg\",\"type\":\"social\"},{\"name\":\"linkedin\",\"val\":\"https://www.linkedin.com/company/tencentedgeone\",\"svg\":\"linkedin.svg\",\"type\":\"social\"},{\"name\":\"facebook\",\"val\":\"https://facebook.com/your_facebook\",\"svg\":\"facebook.svg\",\"type\":\"social\"},{\"name\":\"github\",\"val\":\"https://github.com/TencentEdgeOne\",\"svg\":\"github.svg\",\"type\":\"social\"},{\"name\":\"email\",\"val\":\"mailto:tom@example.com\",\"svg\":\"email.svg\",\"address\":\"tom@example.com\",\"type\":\"contact\"},{\"name\":\"phone\",\"val\":\"tel:+1 (234) 567-890\",\"svg\":\"phone.svg\",\"address\":\"+1 (234) 567-890\",\"type\":\"contact\"},{\"name\":\"location\",\"val\":\"https://github.com/tomcomtang\",\"address\":\"San Francisco, CA\",\"svg\":\"location.svg\",\"type\":\"contact\"}]}",
+      "link": "https://tomchild5.wordpress.com/category/socials/",
+      "name": "Socials",
+      "slug": "socials",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/14403",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=14403"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "count": 9,
+      "description": "",
+      "link": "https://tomchild5.wordpress.com/category/uncategorized/",
+      "name": "Uncategorized",
+      "slug": "uncategorized",
+      "taxonomy": "category",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories/1",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/categories"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/taxonomies/category"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://public-api.wordpress.com/wp/v2/sites/tomchild5.wordpress.com/posts?categories=1"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ]
+}
