@@ -1,12 +1,12 @@
-// 统一的兜底数据文件
-// 当 WordPress API 请求失败或数据不完整时使用
+// Unified fallback data file
+// Used when WordPress API requests fail or data is incomplete
 
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 
-// 动态生成 fallbackPosts
+// Dynamically generate fallbackPosts
 const DOCS_DIR = path.join(__dirname, '../../docs');
 // let fallbackPosts = [];
 // if (fs.existsSync(DOCS_DIR)) {
@@ -19,30 +19,30 @@ const DOCS_DIR = path.join(__dirname, '../../docs');
 //     const html = marked(content);
 //     const stat = fs.statSync(filePath);
 //     const fileBase = path.basename(file, '.md');
-//     // 处理tags为id数组
+//     // Handle tags as id array
 //     let tags = [];
 //     if (Array.isArray(data.tags)) {
 //       tags = data.tags.map(t => Number(t)).filter(t => !isNaN(t));
 //     } else if (typeof data.tags === 'string') {
 //       tags = data.tags.split(',').map(t => Number(t.trim())).filter(t => !isNaN(t));
 //     }
-//     // 计算阅读时长（优先用frontmatter的read，否则用内容字数估算）
+//     // Calculate read time (prioritize frontmatter read, otherwise estimate by content word count)
 //     let read = data.read;
 //     if (!read) {
 //       const words = content.replace(/<[^>]+>/g, '').split(/\s+/).length;
 //       read = `${Math.max(1, Math.ceil(words / 200))} min read`;
 //     }
-//     // 封面
+//     // Cover image
 //     const cover = data.cover || data.jetpack_featured_media_url || '';
-//     // 副标题
+//     // Subtitle
 //     const subtitle = data.subtitle || '';
-//     // 标题
+//     // Title
 //     const title = data.title || fileBase;
-//     // 摘要
+//     // Excerpt
 //     const excerpt = data.excerpt || html.replace(/<[^>]+>/g, '').slice(0, 180) + '...';
-//     // 作者
+//     // Author
 //     const author = data.author || 1;
-//     // 分类
+//     // Categories
 //     const categories = data.categories || [];
 //     return {
 //       id: data.id || id++,
@@ -2700,7 +2700,7 @@ const fallbackPosts = [
   }
 ];
 
-// 1. 读取所有 md 文件，收集所有 tag id
+// 1. Read all md files and collect all tag ids
 let usedTagIds = new Set();
 if (fs.existsSync(DOCS_DIR)) {
   const files = fs.readdirSync(DOCS_DIR).filter(f => f.endsWith('.md'));
@@ -2715,7 +2715,7 @@ if (fs.existsSync(DOCS_DIR)) {
     }
   });
 }
-// Hero 分类兜底数据
+// Hero category fallback data
 const fallbackHero = {
   basic: {
     title: "Welcome",
@@ -2729,7 +2729,7 @@ const fallbackHero = {
   ]
 };
 
-// Contact 分类兜底数据
+// Contact category fallback data
 const fallbackContact = {
   title: "Get In Touch",
   description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
@@ -2739,7 +2739,7 @@ const fallbackContact = {
   }
 };
 
-// Socials 分类兜底数据
+// Socials category fallback data
 const fallbackSocials = {
   socials: [
     { name: "twitter", val: "https://twitter.com/", svg: "twitter.svg", type: "social" },
@@ -2752,7 +2752,7 @@ const fallbackSocials = {
   ]
 };
 
-// Comments 分类兜底数据
+// Comments category fallback data
 const fallbackComments = {
   title: "Comments & Discussion",
   description: "Share your thoughts, questions, or suggestions here. Let's connect and discuss!",
@@ -2766,19 +2766,19 @@ const fallbackComments = {
   ]
 };
 
-// Posts 分类兜底数据
+// Posts category fallback data
 const fallbackPostsMeta = {
   title: "Blog Posts",
   description: "Explore our latest articles on web development, design, and technology"
 };
 
-// About 分类兜底数据
+// About category fallback data
 const fallbackAbout = {
   title: "About Me",
   content: "Hi, I'm Someone, a passionate web developer and blogger. I love exploring new technologies and sharing knowledge with the community."
 };
 
-// Footer 分类兜底数据
+// Footer category fallback data
 const fallbackFooter = {
   text: "© 2025 Someone. All rights reserved.",
   links: [
@@ -2788,7 +2788,7 @@ const fallbackFooter = {
   extra: "Built with Gatsby + WordPress"
 };
 
-// Skills 分类兜底数据
+// Skills category fallback data
 const fallbackSkills = [
   { id: 1, percentage: 95, color: "#61dafb", icon: "R", name: "React" },
   { id: 2, percentage: 90, color: "#f7df1e", icon: "JS", name: "JavaScript" },
@@ -2804,7 +2804,7 @@ const fallbackSkills = [
   { id: 12, percentage: 68, color: "#007acc", icon: "W", name: "Webpack" }
 ];
 
-// Projects 分类兜底数据
+// Projects category fallback data
 const fallbackProjects = [
   {
     id: 1,
@@ -2847,29 +2847,29 @@ const fallbackProjects = [
   }
 ];
 
-// 默认作者信息
+// Default author information
 const defaultAuthor = "Someone";
 const defaultAuthorAvatar = "https://avatars.githubusercontent.com/u/20943608?v=4";
 
-// 站点配置兜底数据
+// Site config fallback data
 const fallbackSiteConfig = {
   siteName: "Portfolio Blog",
   wordpressUrl: "https://example.wordpress.com"
 };
 
-// Giscus 配置
+// Giscus configuration
 const giscusConfig = {
   repo: process.env.GATSBY_GISCUS_REPO,
   repoId: process.env.GATSBY_GISCUS_REPO_ID,
-  category: "Ideas", // 写死
+  category: "Ideas", // Hardcoded
   categoryId: process.env.GATSBY_GISCUS_CATEGORY_ID,
-  mapping: "pathname", // 写死
-  reactionsEnabled: "1", // 写死
-  emitMetadata: "0", // 写死
-  inputPosition: "top", // 写死
-  theme: "noborder_light", // 写死
-  lang: "en", // 写死
-  loading: "lazy" // 写死
+  mapping: "pathname", // Hardcoded
+  reactionsEnabled: "1", // Hardcoded
+  emitMetadata: "0", // Hardcoded
+  inputPosition: "top", // Hardcoded
+  theme: "noborder_light", // Hardcoded
+  lang: "en", // Hardcoded
+  loading: "lazy" // Hardcoded
 };
 
 module.exports = {

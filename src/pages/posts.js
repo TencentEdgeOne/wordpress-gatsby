@@ -5,11 +5,11 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const PostsPage = ({ data }) => {
-  // 从GraphQL查询结果中获取数据
+  // Get data from GraphQL query results
   const postsData = data.allWordPressPost.nodes
   const categoriesData = data.allWordPressCategory.nodes
   
-  // 查找Posts分类
+  // Find Posts category
   const postsCategory = categoriesData.find(cat => 
     cat.name === 'Posts' || 
     cat.name === 'posts' ||
@@ -23,7 +23,7 @@ const PostsPage = ({ data }) => {
   const [expandedPosts, setExpandedPosts] = useState(new Set())
   const [hoveredRow, setHoveredRow] = useState(null)
 
-  // 获取所有唯一的标签
+  // Get all unique tags
   const allTags = useMemo(() => {
     const tags = new Set()
     if (postsData && Array.isArray(postsData)) {
@@ -36,7 +36,7 @@ const PostsPage = ({ data }) => {
     return Array.from(tags).sort()
   }, [postsData])
 
-  // 筛选文章
+  // Filter posts
   const filteredPosts = useMemo(() => {
     if (!postsData || !Array.isArray(postsData)) {
       return []
@@ -52,20 +52,20 @@ const PostsPage = ({ data }) => {
     })
   }, [postsData, searchTerm, selectedTags])
 
-  // 按日期分组posts
+  // Group posts by date
   const groupedPosts = useMemo(() => {
     const groups = {};
     filteredPosts.forEach(post => {
-      // 提取日期部分，去掉时间部分
+      // Extract date part, remove time part
       const dateOnly = post.date.split('T')[0];
       if (!groups[dateOnly]) groups[dateOnly] = [];
       groups[dateOnly].push(post);
     });
-    // 保持日期降序
+    // Keep dates in descending order
     return Object.entries(groups).sort((a, b) => new Date(b[0]) - new Date(a[0]));
   }, [filteredPosts]);
 
-  // 切换标签选择
+  // Toggle tag selection
   const toggleTag = (tag) => {
     setSelectedTags(prev => 
       prev.includes(tag) 
@@ -74,7 +74,7 @@ const PostsPage = ({ data }) => {
     )
   }
 
-  // 切换文章展开状态
+  // Toggle post expanded state
   const toggleExpanded = (postId) => {
     setExpandedPosts(prev => {
       const newSet = new Set(prev)
@@ -87,7 +87,7 @@ const PostsPage = ({ data }) => {
     })
   }
 
-  // 格式化日期
+  // Format date
   const formatDate = (dateString) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {
@@ -97,7 +97,7 @@ const PostsPage = ({ data }) => {
     })
   }
 
-  // 柳条装饰SVG组件
+  // Willow decoration SVG component
   const WillowDecoration = ({ isLeft = true }) => (
     <div
       style={{
@@ -114,7 +114,7 @@ const PostsPage = ({ data }) => {
     />
   )
 
-  // 在PostsPage组件内添加一个生成随机时长的函数
+  // Function to generate random read time in PostsPage component
   const getRandomReadTime = () => `${Math.floor(Math.random() * 16) + 5} min read`;
 
   return (
@@ -143,7 +143,7 @@ const PostsPage = ({ data }) => {
       }} />
       
       <div className="posts-page-container">
-        {/* 页面标题 */}
+        {/* Page title */}
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h1 style={{ 
             fontSize: '2.5rem', 
@@ -165,7 +165,7 @@ const PostsPage = ({ data }) => {
           </p>
         </div>
 
-        {/* 搜索和筛选区域 */}
+        {/* Search and filter area */}
         <div style={{ 
           marginBottom: '2rem',
           padding: '1.5rem 0',
@@ -247,7 +247,7 @@ const PostsPage = ({ data }) => {
           </div>
         </div>
 
-        {/* 文章列表 */}
+        {/* Posts list */}
         <div style={{ marginTop: '2rem' }}>
           {filteredPosts.length === 0 ? (
             <div style={{ 
@@ -293,7 +293,7 @@ const PostsPage = ({ data }) => {
                         onMouseEnter={e => setHoveredRow(post.wordpressId)}
                         onMouseLeave={e => setHoveredRow(null)}
                         >
-                          {/* 标题列（带柳条装饰） */}
+                          {/* Title column (with willow decoration) */}
                           <div style={{
                             flex: 2,
                             display: 'flex',
@@ -367,7 +367,7 @@ const PostsPage = ({ data }) => {
                               <WillowDecoration isLeft={true} />
                             </div>
                           </div>
-                          {/* 标签列 */}
+                          {/* Tags column */}
                           <div style={{
                             flex: 1.2,
                             display: 'flex',
@@ -405,7 +405,7 @@ const PostsPage = ({ data }) => {
                               </div>
                             )}
                           </div>
-                          {/* 展开按钮列 */}
+                          {/* Expand button column */}
                           <div style={{
                             flex: '0 0 80px',
                             display: 'flex',
@@ -448,7 +448,7 @@ const PostsPage = ({ data }) => {
                             </button>
                           </div>
                         </div>
-                        {/* 展开内容 */}
+                        {/* Expanded content */}
                         <div
                           style={{
                             maxHeight: isExpanded ? '320px' : '0',
@@ -465,10 +465,10 @@ const PostsPage = ({ data }) => {
                             pointerEvents: isExpanded ? 'auto' : 'none',
                           }}
                         >
-                          {/* 左侧：描述、时长、按钮 */}
+                          {/* Left: description, duration, button */}
                           <div style={{ flex: 2, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingLeft: '3rem' }}>
                             <div style={{ fontSize: '1.1rem', color: '#333', marginBottom: '1rem', lineHeight: 1.7 }}>{post.excerpt.replace(/<[^>]+>/g, '')}</div>
-                            {/* Read more + 时长 */}
+                            {/* Read more + duration */}
                             <div
                               style={{ display: 'flex', alignItems: 'center', gap: '1.1rem', marginBottom: 0 }}
                               onMouseEnter={e => setHoveredRow(post.wordpressId)}
@@ -497,7 +497,7 @@ const PostsPage = ({ data }) => {
                               <span style={{ fontSize: '0.95rem', color: '#888', margin: 0, whiteSpace: 'nowrap' }}>⏱️ {post.readTime || getRandomReadTime()}</span>
                             </div>
                           </div>
-                          {/* 右侧：封面图 */}
+                          {/* Right: cover image */}
                           <div style={{
                             flex: 1.2,
                             minWidth: '180px',
@@ -508,7 +508,7 @@ const PostsPage = ({ data }) => {
                             justifyContent: 'center',
                           }}>
                             {post.featuredImage ? (
-                              // 如果有特色图片，显示真实图片
+                              // If featured image exists, display real image
                               <img 
                                 src={post.featuredImage}
                                 alt={post.title}
@@ -520,13 +520,13 @@ const PostsPage = ({ data }) => {
                                   objectFit: 'contain',
                                 }}
                                 onError={(e) => {
-                                  // 如果图片加载失败，显示默认SVG
+                                  // If image loading fails, display default SVG
                                   e.target.style.display = 'none';
                                   e.target.nextSibling.style.display = 'flex';
                                 }}
                               />
                             ) : null}
-                            {/* 默认SVG封面图（当没有特色图片或图片加载失败时显示） */}
+                            {/* Default SVG cover (displayed when no featured image or image loading fails) */}
                             <div style={{
                               display: post.featuredImage ? 'none' : 'flex',
                               width: '100%',
@@ -536,7 +536,7 @@ const PostsPage = ({ data }) => {
                             }}>
                               {(() => {
                                 const svgs = [
-                                  // 蓝色
+                                  // Blue
                                   <svg key="blue" width="180" height="200" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="180" height="200" rx="16" fill="#4299e1"/>
                                     <rect x="30" y="60" width="80" height="30" rx="8" fill="#fff"/>
@@ -544,7 +544,7 @@ const PostsPage = ({ data }) => {
                                     <circle cx="70" cy="75" r="6" fill="#4299e1"/>
                                     <rect x="30" y="110" width="40" height="16" rx="8" fill="#fff"/>
                                   </svg>,
-                                  // 绿色
+                                  // Green
                                   <svg key="green" width="180" height="200" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="180" height="200" rx="16" fill="#38b2ac"/>
                                     <rect x="30" y="50" width="90" height="20" rx="10" fill="#fff"/>
@@ -552,7 +552,7 @@ const PostsPage = ({ data }) => {
                                     <circle cx="120" cy="60" r="7" fill="#38b2ac"/>
                                     <circle cx="100" cy="90" r="7" fill="#38b2ac"/>
                                   </svg>,
-                                  // 橙色
+                                  // Orange
                                   <svg key="orange" width="180" height="200" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="180" height="200" rx="16" fill="#ed8936"/>
                                     <rect x="40" y="40" width="70" height="40" rx="8" fill="#fff"/>
@@ -581,7 +581,7 @@ const PostsPage = ({ data }) => {
 
 export default PostsPage
 
-// GraphQL查询
+// GraphQL query
 export const query = graphql`
   query PostsPageQuery {
     allWordPressPost(sort: {date: DESC}) {

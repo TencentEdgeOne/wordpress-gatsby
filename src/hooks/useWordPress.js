@@ -9,7 +9,7 @@ import {
   getContactFromCategory
 } from '../services/wordpressApi'
 
-// 从分类获取社交媒体数据的 Hook
+// Hook to get social media data from category
 export const useSocialMediaFromCategory = () => {
   const [socialMedia, setSocialMedia] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ export const useSocialMediaFromCategory = () => {
   return { socialMedia, loading, error };
 };
 
-// 专门请求hero数据的Hook
+// Hook specifically for requesting hero data
 export const useHeroFromCategory = () => {
   const [heroData, setHeroData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -60,7 +60,7 @@ export const useHeroFromCategory = () => {
   return { heroData, loading, error };
 };
 
-// 专门请求aboutData的Hook
+// Hook specifically for requesting about data
 export const useAboutFromCategory = () => {
   const [aboutData, setAboutData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -85,7 +85,7 @@ export const useAboutFromCategory = () => {
   return { aboutData, loading, error };
 };
 
-// 专门请求footer数据的Hook
+// Hook specifically for requesting footer data
 export const useFooterFromCategory = () => {
   const [footerData, setFooterData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -97,7 +97,7 @@ export const useFooterFromCategory = () => {
         setLoading(true);
         setError(null);
         const data = await getFooterFromCategory();
-        setFooterData(data.footer || data); // 兼容直接是footer对象或外层包裹footer
+        setFooterData(data.footer || data); // Compatible with footer object or wrapped in outer layer
       } catch (err) {
         setError(err.message);
       } finally {
@@ -110,7 +110,7 @@ export const useFooterFromCategory = () => {
   return { footerData, loading, error };
 };
 
-// 专门请求posts页面主标题、副标题的Hook
+// Hook specifically for requesting posts page title and subtitle
 export const usePostsPageMetaFromCategory = () => {
   const [meta, setMeta] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -135,7 +135,7 @@ export const usePostsPageMetaFromCategory = () => {
   return { meta, loading, error };
 };
 
-// 专门请求comments页面主标题、副标题、准则列表的Hook
+// Hook specifically for requesting comments page title, subtitle, and guidelines list
 export const useCommentsPageMetaFromCategory = () => {
   const [meta, setMeta] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -160,7 +160,7 @@ export const useCommentsPageMetaFromCategory = () => {
   return { meta, loading, error };
 };
 
-// 专门请求contact页面数据的Hook
+// Hook specifically for requesting contact page data
 export const useContactFromCategory = () => {
   const [contactData, setContactData] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,6 @@
-// 首页样式统一管理文件
+// Home page styles unified management file
 
-// ==================== HeroSection 样式 ====================
+// ==================== HeroSection styles ====================
 export const heroStyles = {
   pageStyle: {
     background: '#fafdff',
@@ -186,7 +186,7 @@ export const heroStyles = {
   },
 }
 
-// ==================== AboutMe 样式 ====================
+// ==================== AboutMe styles ====================
 export const aboutStyles = {
   aboutSection: {
     background: 'linear-gradient(135deg, #6dd5c7 0%, #5bc0ae 50%, #4db09e 100%)',
@@ -516,7 +516,7 @@ export const aboutStyles = {
   },
 }
 
-// 社交媒体图标动画样式
+// Social media icon animation styles
 export const socialIconAnimation = {
   '@keyframes fadeInUp': {
     '0%': {

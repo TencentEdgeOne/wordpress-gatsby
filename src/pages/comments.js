@@ -8,7 +8,7 @@ import Giscus from '@giscus/react';
 const ICONS = ["circle", "square", "triangle", "pentagon", "star", "heart"];
 const COLORS = ["#76cfc5", "#ffb400", "#ec6664", "#b4b8f8", "#76cfc5", "#ffb400"];
 
-// HTML解码函数
+// HTML decode function
 const decodeHtml = (html) => {
   if (!html) return '';
   return html
@@ -87,10 +87,10 @@ const renderIcon = (iconType, color) => {
 }
 
 const CommentsPage = ({ data }) => {
-  // 从GraphQL查询结果中获取数据
+  // Get data from GraphQL query result
   const categoriesData = data.allWordPressCategory.nodes
   
-  // 查找Comments分类
+  // Find Comments category
   const commentsCategory = categoriesData.find(cat => 
     cat.name === 'Comments' || 
     cat.name === 'comments' ||
@@ -99,23 +99,23 @@ const CommentsPage = ({ data }) => {
   
   const commentsData = commentsCategory?.parsedData || {}
 
-  // 解码标题和副标题
+  // Decode title and subtitle
   const decodedTitle = decodeHtml(commentsData.title || 'Comments & Discussion');
   const decodedSubtitle = decodeHtml(commentsData.description || 'Share your thoughts, questions, or suggestions here. Let\'s connect and discuss!');
 
-  // Giscus 配置 - 直接用环境变量，无默认值
+  // Giscus config - use environment variables directly, no default values
   const giscusConfig = {
     repo: process.env.GATSBY_GISCUS_REPO,
     repoId: process.env.GATSBY_GISCUS_REPO_ID,
-    category: "Ideas", // 写死
+    category: "Ideas", // hardcoded
     categoryId: process.env.GATSBY_GISCUS_CATEGORY_ID,
-    mapping: "pathname", // 写死
-    reactionsEnabled: "1", // 写死
-    emitMetadata: "0", // 写死
-    inputPosition: "top", // 写死
-    theme: "noborder_light", // 写死
-    lang: "en", // 写死
-    loading: "lazy" // 写死
+    mapping: "pathname", // hardcoded
+    reactionsEnabled: "1", // hardcoded
+    emitMetadata: "0", // hardcoded
+    inputPosition: "top", // hardcoded
+    theme: "noborder_light", // hardcoded
+    lang: "en", // hardcoded
+    loading: "lazy" // hardcoded
   };
 
   return (
@@ -220,7 +220,7 @@ const CommentsPage = ({ data }) => {
 
 export default CommentsPage
 
-// GraphQL查询
+// GraphQL query
 export const query = graphql`
   query CommentsPageQuery {
     allWordPressCategory {

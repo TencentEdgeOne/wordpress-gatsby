@@ -9,7 +9,7 @@ const AboutMe = () => {
   const [cardVisible, setCardVisible] = useState(false)
   const [hoveredProject, setHoveredProject] = useState(null)
 
-  // 使用 GraphQL 查询获取预取的 WordPress 数据
+  // Use GraphQL query to get prefetched WordPress data
   const data = useStaticQuery(graphql`
     query AboutMeData {
       aboutCategory: allWordPressCategory(filter: { slug: { eq: "about" } }) {
@@ -34,7 +34,7 @@ const AboutMe = () => {
   const projectsData = data.projectsCategory?.nodes[0]?.parsedData || [];
   const skillsData = data.skillsCategory?.nodes[0]?.parsedData || [];
 
-  // 延迟显示卡片，避免布局计算导致的闪现
+  // Delay card display to avoid flashing due to layout calculation
   useEffect(() => {
     const timer = setTimeout(() => {
       setCardVisible(true)
@@ -42,7 +42,7 @@ const AboutMe = () => {
     return () => clearTimeout(timer)
   }, [])
 
-  // 适配 about 数据
+  // Adapt about data
   let about;
   if (aboutData && aboutData.title) {
     about = {
@@ -63,7 +63,7 @@ const AboutMe = () => {
 
   console.log("about",about);
 
-  // 适配项目数据
+  // Adapt project data
   let displayProjects = [];
   if (projectsData && Array.isArray(projectsData)) {
     displayProjects = projectsData.slice(0, 3).map(project => ({
@@ -76,7 +76,7 @@ const AboutMe = () => {
     }));
   }
 
-  // 适配技能数据
+  // Adapt skill data
   let displaySkills = [];
   if (skillsData && Array.isArray(skillsData)) {
     displaySkills = skillsData.map(skill => ({
@@ -87,7 +87,7 @@ const AboutMe = () => {
     }));
   }
 
-  // 将技能数据分成两列
+  // Split skill data into two columns
   const leftSkills = displaySkills.filter((_, index) => index % 2 === 0)
   const rightSkills = displaySkills.filter((_, index) => index % 2 === 1)
 

@@ -3,7 +3,7 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 
 const getReadTime = (html) => {
-  // 简单估算：每分钟200字
+  // Simple estimation: 200 words per minute
   if (!html) return '';
   const text = html.replace(/<[^>]+>/g, '');
   const words = text.length;
@@ -22,7 +22,7 @@ const PostPage = ({ pageContext }) => {
     );
   }
 
-  // 兜底处理头像和阅读时长
+  // Fallback handling for avatar and read time
   const authorAvatar = post.authorAvatar || '/image/20943608.jpeg';
   const readTime = post.readTime || getReadTime(post.content);
 
@@ -45,7 +45,7 @@ const PostPage = ({ pageContext }) => {
         `
       }} />
       <main className="posts-page-container">
-        {/* 顶部卡片 */}
+        {/* Top card */}
         <div className="post-header-card" style={{
           background: 'white',
           borderRadius: '20px',
@@ -56,7 +56,7 @@ const PostPage = ({ pageContext }) => {
           width: '100%',
           boxSizing: 'border-box',
         }}>
-          {/* 标题 */}
+          {/* Title */}
           <h1
             style={{
               fontSize: '2rem',
@@ -75,7 +75,7 @@ const PostPage = ({ pageContext }) => {
           >
             {post.title}
           </h1>
-          {/* 标签 */}
+          {/* Tags */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', margin: '1.2rem 0' }}>
             {post.tags && post.tags.map(tag => (
               <span key={tag} style={{
@@ -89,7 +89,7 @@ const PostPage = ({ pageContext }) => {
               }}>{tag}</span>
             ))}
           </div>
-          {/* 作者信息区块（副标题下方，横向排列） */}
+          {/* Author info section (below subtitle, horizontal layout) */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', marginTop: '0.5rem', flexWrap: 'wrap' }}>
             <img
               src={authorAvatar}
@@ -114,7 +114,7 @@ const PostPage = ({ pageContext }) => {
             </div>
           </div>
         </div>
-        {/* 正文内容 */}
+        {/* Content body */}
         <div className="post-content" style={{
           background: 'white',
           borderRadius: '20px',

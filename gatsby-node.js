@@ -4,28 +4,28 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
  */
 
-// WordPress API 配置
+// WordPress API configuration
 const WORDPRESS_URL = process.env.GATSBY_WORDPRESS_URL;
 
-// 新增：通过环境变量控制 API 模式
+// New: control API mode through environment variable
 defaultApiMode = process.env.GATSBY_WORDPRESS_API_MODE || 'default'; // 'default' or 'acf'
 
-// 自动判断API基地址
+// Auto-detect API base URL
 const getApiBase = (url) => {
   if (!url) return null;
   if (url.includes('wordpress.com')) {
-    // WordPress.com 官方
+    // WordPress.com official
     const site = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
     return `https://public-api.wordpress.com/wp/v2/sites/${site}`;
   } else {
-    // 自建 WordPress
+    // Self-hosted WordPress
     return `${url.replace(/\/$/, '')}/wp-json/wp/v2`;
   }
 };
 
 const API_BASE = getApiBase(WORDPRESS_URL);
 
-// 导入统一的兜底数据
+// Import unified fallback data
 const {
   fallbackPosts,
   fallbackPostsMeta,
@@ -33,11 +33,11 @@ const {
   defaultAuthorAvatar
 } = require('./src/data/fallbackData');
 
-// WordPress API 数据获取函数（兼容两种模式）
+// WordPress API data fetch function (compatible with two modes)
 const fetchWordPressData = async () => {
   try {
     if (defaultApiMode === 'acf') {
-      // 付费/自定义 REST 路由模式，分别请求各自路径
+      // Paid/custom REST route mode, request each path separately
       const [
         postsResponse,
         heroResponse,
@@ -68,7 +68,7 @@ const fetchWordPressData = async () => {
       const comments = await commentsResponse.json();
       const skills = await skillsResponse.json();
       const projects = await projectsResponse.json();
-      // 组装成 categories 兼容结构
+      // Assemble into categories compatible structure
       const categories = [
         { slug: 'hero', acf: hero },
         { slug: 'footer', acf: footer },
@@ -79,7 +79,7 @@ const fetchWordPressData = async () => {
         { slug: 'skills', acf: skills },
         { slug: 'projects', acf: projects }
       ];
-      // pages 依然从 REST API 获取
+      // pages still fetched from REST API
       const pagesResponse = await fetch(`${API_BASE}/pages?_embed&per_page=50`);
       const pages = await pagesResponse.json();
       return {
@@ -89,7 +89,7 @@ const fetchWordPressData = async () => {
         siteName: WORDPRESS_URL.replace(/^https?:\/\//, '').replace(/\/$/, '')
       };
     } else {
-      // 默认模式，兼容免费版，从 categories 获取
+      // Default mode, compatible with free version, fetch from categories
       const [
         postsResponse,
         categoriesResponse,
@@ -115,11 +115,11 @@ const fetchWordPressData = async () => {
   }
 };
 
-// 解析分类描述中的 JSON 数据
+// Parse JSON data from category description
 const parseCategoryData = (description) => {
   if (!description) return null;
   try {
-    // 直接用 eval 解析 description，兼容对象和数组
+    // Directly parse description with eval, compatible with objects and arrays
     return eval('(' + description + ')');
   } catch (e) {
     console.log('Error parsing category data with eval:', e.message);
@@ -127,7 +127,7 @@ const parseCategoryData = (description) => {
     return null;
   }
 };
-// 简单的HTML解码函数（不依赖DOM）
+// Simple HTML decode function (not relying on DOM)
 const decodeHtml = (html) => {
   if (!html) return '';
   return html
@@ -169,7 +169,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
   const { createNode } = actions;
   
   if (!process.env.GATSBY_WORDPRESS_URL || process.env.GATSBY_WORDPRESS_URL === 'https://your-wordpress-site.com') {
-    // 只要没配 WordPress，全部用 fallbackData
+    // If WordPress is not configured, use fallbackData for everything
     const {
       fallbackPosts,
       fallbackHero,
@@ -189,7 +189,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
           type: 'WordPressPost',
           contentDigest: createContentDigest(post),
         },
-        // 文章数据
+        // Post data
         wordpressId: post.id,
         title: decodeHtml(post.title?.rendered || ''),
         content: post.content?.rendered || '',
@@ -202,11 +202,11 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         featuredImage: post.jetpack_featured_media_url || post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '',
         categories: post._embedded?.['wp:term']?.[0]?.map(cat => cat.name) || [],
         tags: post._embedded?.['wp:term']?.[1]?.map(tag => tag.name) || [],
-        // 计算阅读时间（基于内容长度）
+        // Calculate read time (based on content length)
         readTime: Math.ceil((post.content?.rendered?.length || 0) / 1000) + ' min read',
       });
     });
-    // 注入所有分类数据
+    // Inject all category data
     const fallbackCategories = [
       { name: 'hero', slug: 'hero', description: '', parsedData: fallbackHero },
       { name: 'about', slug: 'about', description: '', parsedData: fallbackAbout }, 
@@ -237,7 +237,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
   
   console.log('🔄 Fetching WordPress data...');
   
-  // 获取 WordPress 数据
+  // Fetch WordPress data
   const wpData = await fetchWordPressData();
   
   if (!wpData) {
@@ -251,7 +251,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
 
   console.log("posts",JSON.stringify(posts));
   
-  // 创建 WordPress 文章节点
+  // Create WordPress post nodes
   posts.forEach((post, index) => {
     const nodeId = createNodeId(`wordpress-post-${post.id}`);
     
@@ -261,7 +261,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         type: 'WordPressPost',
         contentDigest: createContentDigest(post),
       },
-      // 文章数据
+      // Post data
       wordpressId: post.id,
       title: decodeHtml(post.title?.rendered || ''),
       content: post.content?.rendered || '',
@@ -274,12 +274,12 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
       featuredImage: post.jetpack_featured_media_url || post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '',
       categories: post._embedded?.['wp:term']?.[0]?.map(cat => cat.name) || [],
       tags: post._embedded?.['wp:term']?.[1]?.map(tag => tag.name) || [],
-      // 计算阅读时间（基于内容长度）
+      // Calculate read time (based on content length)
       readTime: Math.ceil((post.content?.rendered?.length || 0) / 1000) + ' min read',
     });
   });
   
-  // 创建 WordPress 分类节点
+  // Create WordPress category nodes
   console.log('📋 Processing categories:');
   categories.forEach((category) => {
     console.log(`  - ${category.name} (${category.slug})`);
@@ -288,7 +288,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
   categories.forEach((category) => {
     const nodeId = createNodeId(`wordpress-category-${category.id}`);
     
-    // 根据分类 slug 确定对应的兜底数据
+    // Determine corresponding fallback data based on category slug
     const isHero = category.slug === 'hero';
     const isContact = category.slug === 'contact';
     const isSocials = category.slug === 'socials';
@@ -307,7 +307,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     }
     let description = category.description;
     
-    // 为每个分类设置兜底数据
+    // Set fallback data for each category
     if (isHero && (!parsedData || !parsedData.basic || !parsedData.basic.title)) {
       console.log('🔍 Hero category found, but data is missing or invalid:');
       console.log('  - Category name:', category.name);
@@ -353,18 +353,18 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         type: 'WordPressCategory',
         contentDigest: createContentDigest(category),
       },
-      // 分类数据
+      // Category data
       wordpressId: category.id,
       name: category.name,
       slug: category.slug,
       description: description,
       count: category.count,
-      // 解析分类描述中的 JSON 数据
+      // Parse JSON data from category description
       parsedData: parsedData,
     });
   });
   
-  // 创建 WordPress 页面节点
+  // Create WordPress page nodes
   pages.forEach((page) => {
     const nodeId = createNodeId(`wordpress-page-${page.id}`);
     
@@ -374,7 +374,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         type: 'WordPressPage',
         contentDigest: createContentDigest(page),
       },
-      // 页面数据
+      // Page data
       wordpressId: page.id,
       title: page.title?.rendered || '',
       content: page.content?.rendered || '',
@@ -386,7 +386,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     });
   });
   
-  // 创建站点配置节点
+  // Create site config node
   const siteConfigNodeId = createNodeId('wordpress-site-config');
   createNode({
     id: siteConfigNodeId,
@@ -409,7 +409,7 @@ exports.createPages = async ({ actions, graphql }) => {
   
   console.log('🔄 Creating pages from WordPress data...');
   
-  // 查询 WordPress 文章数据
+  // Query WordPress post data
   const result = await graphql(`
     query {
       allWordPressPost {
@@ -433,7 +433,7 @@ exports.createPages = async ({ actions, graphql }) => {
   
   if (result.errors) {
     console.error('GraphQL query error:', result.errors);
-    // 如果查询失败，使用 fallback 数据
+    // If query fails, use fallback data
     fallbackPosts.forEach(post => {
       createPage({
         path: `/post/${post.slug}`,
@@ -449,7 +449,7 @@ exports.createPages = async ({ actions, graphql }) => {
   
   const posts = result.data.allWordPressPost.nodes;
   
-  // 为每篇 WordPress 文章创建页面
+  // Create page for each WordPress post
   posts.forEach(post => {
     createPage({
       path: `/post/${post.slug}`,
@@ -459,7 +459,7 @@ exports.createPages = async ({ actions, graphql }) => {
         post: {
           id: post.wordpressId,
           title: post.title,
-          subtitle: post.title, // 可以后续从 WordPress 自定义字段获取
+          subtitle: post.title, // Can be obtained from WordPress custom fields later
           author: post.author,
           authorAvatar: post.authorAvatar,
           tags: post.tags,

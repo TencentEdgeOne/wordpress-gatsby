@@ -4,9 +4,9 @@ import Seo from "../components/seo"
 import { contactPageStyles } from "../styles/contactStyles"
 import { graphql, useStaticQuery } from "gatsby"
 
-// 渲染图标的辅助函数 - 使用 img 标签加载 SVG 文件
+// Helper function to render icons - use img tag to load SVG files
 const renderIcon = (iconType, socialMediaData) => {
-  // 从接口数据中查找对应的图标配置
+  // Find corresponding icon config from API data
   const iconData = socialMediaData?.find(item => item.name === iconType && item.type === 'contact')
   
   if (iconData && iconData.svg) {
@@ -24,13 +24,13 @@ const renderIcon = (iconType, socialMediaData) => {
     )
   }
   
-  // 如果没有找到接口数据，返回 null
+  // If no API data found, return null
   return null
 }
 
-// 渲染社交媒体图标的辅助函数 - 使用 img 标签加载 SVG 文件
+// Helper function to render social media icons - use img tag to load SVG files
 const renderSocialIcon = (iconType, socialMediaData) => {
-  // 从接口数据中查找对应的图标配置
+  // Find corresponding icon config from API data
   const iconData = socialMediaData?.find(item => item.name === iconType && item.type === 'social')
   
   if (iconData && iconData.svg) {
@@ -49,14 +49,14 @@ const renderSocialIcon = (iconType, socialMediaData) => {
     )
   }
   
-  // 如果没有找到接口数据，返回 null
+  // If no API data found, return null
   return null
 }
 
 const ContactPage = () => {
   const usedColors = React.useRef(new Set())
 
-  // 用GraphQL静态查询替换hook
+  // Replace hook with GraphQL static query
   const data = useStaticQuery(graphql`
     query ContactStaticDataQuery {
       allWordPressCategory {
@@ -68,15 +68,15 @@ const ContactPage = () => {
     }
   `)
 
-  // contact页面主内容
+  // Contact page main content
   const contactCategory = data.allWordPressCategory.nodes.find(cat => cat.slug === 'contact')
   const contactData = contactCategory?.parsedData || {}
-  // 社交媒体数据（适配为对象结构）
+  // Social media data (adapted to object structure)
   const socialsCategory = data.allWordPressCategory.nodes.find(cat => cat.slug === 'socials')
   const socialMediaObj = socialsCategory?.parsedData || {}
-  // 过滤出 type 为 'contact' 的社交媒体数据（用于联系信息图标）
+  // Filter out social media data with type 'contact' (for contact info icons)
   const contactSocialMedia = Array.isArray(socialMediaObj.socials) ? socialMediaObj.socials.filter(item => item.type === 'contact') : []
-  // 过滤出 type 为 'social' 的社交媒体数据（用于 Follow Me 区域）
+  // Filter out social media data with type 'social' (for Follow Me section)
   const socialMediaForFollow = Array.isArray(socialMediaObj.socials) ? socialMediaObj.socials.filter(item => item.type === 'social') : []
 
   if (!contactData) {
@@ -106,16 +106,16 @@ const ContactPage = () => {
       'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
     ]
     
-    // 过滤出未使用的颜色
+    // Filter out unused colors
     const availableColors = gradients.filter(color => !usedColors.current.has(color))
     
-    // 如果没有可用的颜色，重置已使用颜色记录
+    // If no available colors, reset used colors record
     if (availableColors.length === 0) {
       usedColors.current.clear()
       return gradients[0]
     }
     
-    // 随机选择一个未使用的颜色
+    // Randomly select an unused color
     const selectedColor = availableColors[Math.floor(Math.random() * availableColors.length)]
     usedColors.current.add(selectedColor)
     
@@ -144,7 +144,7 @@ const ContactPage = () => {
       }} />
       
       <div className="contact-page-container">
-        {/* 页面标题 */}
+        {/* Page title */}
         <div style={{ textAlign: 'center', marginBottom: '3rem', width: '100%' }}>
           <h1 className="contact-title" style={{ 
             fontSize: '2.5rem', 
@@ -168,9 +168,9 @@ const ContactPage = () => {
           </p>
         </div>
 
-        {/* 主要内容区域 */}
+        {/* Main content area */}
         <div className="contact-grid">
-          {/* 联系信息卡片 */}
+          {/* Contact info card */}
           <div style={{
             background: 'linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #f0f0f0, #f8f8f8, #f0f0f0) border-box',
             borderRadius: '16px',
@@ -233,7 +233,7 @@ const ContactPage = () => {
                         onMouseEnter={(e) => e.target.style.color = '#76cfc5'}
                         onMouseLeave={(e) => e.target.style.color = '#666'}
                         onClick={(e) => {
-                          // 添加点击反馈
+                          // Add click feedback
                           e.target.style.transform = 'scale(0.95)';
                           setTimeout(() => {
                             e.target.style.transform = 'none';
@@ -256,7 +256,7 @@ const ContactPage = () => {
               ))}
             </div>
 
-            {/* 留言页面链接按钮 */}
+            {/* Message page link button */}
             <div style={{ textAlign: 'center' }}>
               <a
                 href="/comments"
@@ -288,7 +288,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          {/* 社交媒体链接 */}
+          {/* Social media links */}
           <div style={{
             background: 'linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, #f0f0f0, #f8f8f8, #f0f0f0) border-box',
             borderRadius: '16px',
@@ -355,7 +355,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* 底部信息 */}
+        {/* Bottom information */}
         <div style={{
           textAlign: 'center',
           padding: '2rem 0',

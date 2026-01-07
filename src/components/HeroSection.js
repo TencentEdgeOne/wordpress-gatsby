@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import { heroStyles } from '../styles/homeStyles'
 
-// 鼠标悬停事件处理函数
+// Mouse hover event handler functions
 function handleBtnMouseOver(e) {
   Object.assign(e.target.style, heroStyles.btnHover);
 }
@@ -47,7 +47,7 @@ function handleAvatarMouseOut(e) {
 }
 
 const HeroSection = () => {
-  // 使用 GraphQL 查询获取预取的 WordPress 数据
+  // Use GraphQL query to get prefetched WordPress data
   const data = useStaticQuery(graphql`
     query HeroData {
       heroCategory: allWordPressCategory(filter: { slug: { eq: "hero" } }) {
@@ -66,25 +66,25 @@ const HeroSection = () => {
   const heroData = data.heroCategory?.nodes[0]?.parsedData || null;
   const socialMediaData = data.socialsCategory?.nodes[0]?.parsedData || {};
 
-  // 适配对象结构：只取 social 字段数组
+  // Adapt object structure: only take socials field array
   const socialMediaForHome = Array.isArray(socialMediaData.socials)
     ? socialMediaData.socials.filter(item => item.type === 'social')
     : [];
   console.log('socialMediaForHome:', socialMediaForHome);
-  // 如果没有数据，显示加载状态
+  // If no data, show loading state
   if (!heroData) {
     return <div>Loading hero data...</div>;
   }
 
-  // 适配不同的数据结构
+  // Adapt different data structures
   let basic, buttons;
   
   if (heroData.basic) {
-    // 如果是标准格式
+    // If standard format
     basic = heroData.basic;
     buttons = heroData.buttons;
   } else if (heroData.title) {
-    // 如果是 WordPress 解析的格式
+    // If WordPress parsed format
     basic = {
       title: heroData.title || "Welcome",
       name: heroData.name || heroData.title || "Developer",
@@ -96,7 +96,7 @@ const HeroSection = () => {
       { text: "Contact Me", link: "/contact", type: "secondary" }
     ];
   } else {
-    // 默认数据
+    // Default data
     basic = {
       title: "Welcome",
       name: "Developer",
@@ -109,14 +109,14 @@ const HeroSection = () => {
     ];
   }
 
-  // Hero内容的动画样式
+  // Hero content animation style
   const heroContentStyle = {
     opacity: heroData ? 1 : 0,
     transform: heroData ? 'translateY(0)' : 'translateY(20px)',
     transition: 'opacity 1.2s ease-out, transform 1.2s ease-out'
   };
 
-  // 头像图片的动画样式 - 在社交媒体列表开始渲染时才显示
+  // Avatar image animation style - only shows when social media list starts rendering
   const avatarStyle = {
     ...heroStyles.avatarStyle,
     opacity: socialMediaForHome && socialMediaForHome.length > 0 ? 1 : 0,
@@ -124,7 +124,7 @@ const HeroSection = () => {
     transition: 'opacity 1.2s ease-out, transform 1.2s ease-out'
   };
 
-  // 社交媒体列表的样式，包含淡入动画
+  // Social media list style with fade-in animation
   const socialListStyle = {
     ...heroStyles.socialList,
     opacity: socialMediaForHome && socialMediaForHome.length > 0 ? 1 : 0,
@@ -132,7 +132,7 @@ const HeroSection = () => {
     transition: 'opacity 1.2s ease-out, transform 1.2s ease-out'
   };
 
-  // 社交媒体图标的动画样式
+  // Social media icon animation style
   const getSocialIconStyle = (index) => ({
     ...heroStyles.socialIconBtn,
     opacity: socialMediaForHome && socialMediaForHome.length > 0 ? 1 : 0,

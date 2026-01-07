@@ -1,4 +1,4 @@
-// 联系页面样式
+// Contact page styles
 export const contactPageStyles = `
   body {
     background: linear-gradient(120deg, #fffaf5 0%, #fff5f0 50%, #fff0eb 100%) !important;

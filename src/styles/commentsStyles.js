@@ -1,4 +1,4 @@
-// 评论页面样式 - 只保留页面布局样式
+// Comments page styles - only keep page layout styles
 export const commentsPageStyles = `
   body {
     background: linear-gradient(120deg, #f8fafc 0%, #f5f7fa 100%) !important;

@@ -52,7 +52,7 @@ const activeMenuLinkStyle = {
 }
 
 const Header = ({ siteTitle }) => {
-  // 检查 Giscus 环境变量是否配置
+  // Check if Giscus environment variables are configured
   const isGiscusConfigured = typeof window !== 'undefined' && 
                              process.env.GATSBY_GISCUS_REPO && 
                              process.env.GATSBY_GISCUS_REPO_ID && 
@@ -62,9 +62,9 @@ const Header = ({ siteTitle }) => {
                               repo: process.env.GATSBY_GISCUS_REPO,
                               repoId: process.env.GATSBY_GISCUS_REPO_ID,
                               categoryId: process.env.GATSBY_GISCUS_CATEGORY_ID,
-                              isConfigured: isGiscusConfigured
-                            });
-  // 调试信息（开发环境）
+                            isConfigured: isGiscusConfigured
+                          });
+  // Debug info (development environment)
   if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
     console.log('Giscus config check:', {
       repo: process.env.GATSBY_GISCUS_REPO,

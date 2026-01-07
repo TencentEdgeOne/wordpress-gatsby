@@ -1,12 +1,12 @@
-// WordPress API 服务
+// WordPress API service
 const WORDPRESS_URL = process.env.GATSBY_WORDPRESS_URL
 
-// 检查是否配置了 WordPress URL
+// Check if WordPress URL is configured
 export const isWordPressConfigured = () => {
   return !!WORDPRESS_URL && WORDPRESS_URL !== 'https://your-wordpress-site.com';
 }
 
-// HTML解码函数
+// HTML decode function
 const decodeHtmlEntities = (text) => {
   if (!text) return text;
   
@@ -15,7 +15,7 @@ const decodeHtmlEntities = (text) => {
   return textarea.value;
 };
 
-// 获取单个文章详情
+// Get single post details
 export const getPost = async (slug) => {
   try {
     const siteName = WORDPRESS_URL.replace('https://', '').replace('http://', '').replace('.wordpress.com', '');
@@ -28,13 +28,13 @@ export const getPost = async (slug) => {
     
     const post = posts[0];
     
-    // 获取作者信息
+    // Get author information
     let author = "Someone";
     if (post._embedded && post._embedded.author && post._embedded.author[0]) {
       author = post._embedded.author[0].name;
     }
     
-    // 获取分类信息
+    // Get category information
     const categories = [];
     if (post._embedded && post._embedded['wp:term']) {
       post._embedded['wp:term'].forEach(termGroup => {
@@ -46,7 +46,7 @@ export const getPost = async (slug) => {
       });
     }
     
-    // 获取标签信息
+    // Get tag information
     const tags = [];
     if (post._embedded && post._embedded['wp:term']) {
       post._embedded['wp:term'].forEach(termGroup => {
@@ -58,7 +58,7 @@ export const getPost = async (slug) => {
       });
     }
     
-    // 获取特色图片
+    // Get featured image
     let featuredImage = null;
     if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
       featuredImage = post._embedded['wp:featuredmedia'][0].source_url;
@@ -85,7 +85,7 @@ export const getPost = async (slug) => {
   }
 };
 
-// 从分类获取社交媒体数据
+// Get social media data from category
 export const getSocialMediaFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=socials`);
@@ -105,7 +105,7 @@ export const getSocialMediaFromCategory = async () => {
     try {
       const socialsData = JSON.parse(description);
       
-      // 确保返回的是数组格式
+      // Ensure returned data is in array format
       if (Array.isArray(socialsData)) {
         return socialsData;
       } else if (socialsData.socials && Array.isArray(socialsData.socials)) {
@@ -123,7 +123,7 @@ export const getSocialMediaFromCategory = async () => {
   }
 };
 
-// 从分类获取Hero数据
+// Get Hero data from category
 export const getHeroFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=hero`);
@@ -153,7 +153,7 @@ export const getHeroFromCategory = async () => {
   }
 };
 
-// 从分类获取About数据
+// Get About data from category
 export const getAboutFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=about`);
@@ -183,7 +183,7 @@ export const getAboutFromCategory = async () => {
   }
 };
 
-// 从分类获取Footer数据
+// Get Footer data from category
 export const getFooterFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=footer`);
@@ -213,7 +213,7 @@ export const getFooterFromCategory = async () => {
   }
 };
 
-// 从分类获取Posts页面元数据
+// Get Posts page metadata from category
 export const getPostsPageMetaFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=posts`);
@@ -243,7 +243,7 @@ export const getPostsPageMetaFromCategory = async () => {
   }
 };
 
-// 从分类获取Comments页面元数据
+// Get Comments page metadata from category
 export const getCommentsPageMetaFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=comments`);
@@ -273,7 +273,7 @@ export const getCommentsPageMetaFromCategory = async () => {
   }
 };
 
-// 从分类获取Contact数据
+// Get Contact data from category
 export const getContactFromCategory = async () => {
   try {
     const response = await fetch(`${WORDPRESS_URL}/wp-json/wp/v2/categories?slug=contact`);
